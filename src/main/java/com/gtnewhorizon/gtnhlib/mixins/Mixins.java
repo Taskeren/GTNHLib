@@ -85,6 +85,8 @@ public enum Mixins implements IMixins {
                     "flowerpotcompat.MixinBOPPlant",
                     "flowerpotcompat.MixinBOPMushroom")
             .addRequiredMod(TargetMods.BIOMES_O_PLENTY)),
+    CUSTOM_CLICK_ACTION(new MixinBuilder("Backport custom click action").addCommonMixins("MixinClickEventAction")
+            .addClientMixins("MixinGuiChat").setApplyIf(() -> true).setPhase(Phase.EARLY))
     //
     ;
 

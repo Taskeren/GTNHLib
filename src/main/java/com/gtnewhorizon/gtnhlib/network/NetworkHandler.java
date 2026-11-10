@@ -1,6 +1,7 @@
 package com.gtnewhorizon.gtnhlib.network;
 
 import com.gtnewhorizon.gtnhlib.GTNHLib;
+import com.gtnewhorizon.gtnhlib.chat.customclick.C2SCustomClickPacket;
 import com.gtnewhorizon.gtnhlib.config.PacketSyncConfig;
 import com.gtnewhorizon.gtnhlib.keybind.PacketKeyDown;
 import com.gtnewhorizon.gtnhlib.network.base.NetworkChannel;
@@ -20,6 +21,7 @@ public class NetworkHandler {
         instance.toClient(new TeamDataSync());
 
         instance.toServer(new PacketKeyDown());
+        instance.toServer(new C2SCustomClickPacket());
     }
 
 }
